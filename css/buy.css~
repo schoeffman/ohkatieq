@@ -1,0 +1,155 @@
+#item-column {
+	margin-left: 60px;
+	width: 120px;
+	float: left;
+}
+
+#item-column div {
+	padding: 10px 10px 4px 10px;
+}
+
+#item-column div:hover {
+	background-color: #D8D4CC;
+}
+
+#item-column img {
+	width: 100px;
+	
+}
+
+#single-item-column {
+	background-color: #54A8D4;
+	//position: fixed;
+	margin-top: 10px; 
+	margin-left: 280px;
+	width: 502px;
+	float:left;
+}
+
+#single-item-column .item-box {
+	position: relative;
+	border: 1px solid #D8D4CC;
+}
+
+#single-item-column .item-caption {
+	background-color: #D8D4CC;
+	color: #7B7B78;
+	padding: 8px;
+}
+
+#single-item-column img {
+	display: block;
+	width: 500px;
+	height: 500px;
+	border-bottom: 1px solid #D8D4CC;
+}
+
+.item-name {
+	font-size: 24px;
+}
+
+.item-colors {
+	display: inline;
+}
+
+.color-box {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	margin: 4px;
+	
+}
+
+
+
+.blue { 
+	background: url("/wp-content/themes/oktq/images/colours/blue.jpg"); 
+	background-size:40px 40px;
+	background-repeat:no-repeat;
+}
+
+.green { 
+	background: url("/wp-content/themes/oktq/images/colours/green.jpg"); 
+	background-size:40px 40px;
+	background-repeat:no-repeat;
+}
+
+.lightGreen { 
+	background: url("/wp-content/themes/oktq/images/colours/lightGreen.jpg"); 
+	background-size:40px 40px;
+	background-repeat:no-repeat;
+}
+
+.magenta { 
+	background: url("/wp-content/themes/oktq/images/colours/magenta.jpg"); 
+	background-size:40px 40px;
+	background-repeat:no-repeat;
+}
+
+.orange { 
+	background: url("/wp-content/themes/oktq/images/colours/orange.jpg"); 
+	background-size:40px 40px;
+	background-repeat:no-repeat;
+}
+
+.pink { 
+	background: url("/wp-content/themes/oktq/images/colours/pink.jpg"); 
+	background-size:40px 40px;
+	background-repeat:no-repeat;
+}
+
+.purple { 
+	background: url("/wp-content/themes/oktq/images/colours/purple.jpg"); 
+	background-size:40px 40px;
+	background-repeat:no-repeat;
+}
+
+.yellow { 
+	background: url("/wp-content/themes/oktq/images/colours/yellow.jpg"); 
+	background-size:40px 40px;
+	background-repeat:no-repeat;
+}
+
+.buy-button {
+	display : inline;
+}
+
+.buy-button form {
+display : inline;
+	width: 100px;
+	height: 20px;
+	margin-left: 22px;
+	margin-bottom: 22px;
+}
+
+.buy-button form input {
+	margin-bottom: 11px;
+}
+
+.hide-me {
+	display: none;
+}
+
+.color-box {
+	border: 1px solid #D8D4CC;
+}
+
+.color-box:hover {
+	border: 1px solid #4482E8;
+	cursor: hand; 
+   cursor: pointer;
+}
+
+.buy-button table {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
