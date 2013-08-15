@@ -1,12 +1,8 @@
 jQuery(document).ready(function(){
 
-	//jQuery(".buy-button").hide();	
-
 	jQuery("img.item-preview").click(function() {
 
-		//jQuery(".buy-button").hide();
 		type = jQuery(this).closest("div").attr("class").split(' ')[1];
-		//jQuery("." + type + "Button").show();
 
 		currentID = jQuery(this).closest("div").attr("class").split(' ')[0];
 
@@ -30,12 +26,48 @@ jQuery(document).ready(function(){
 		image = jQuery(this).css("background-image");
 		clas = jQuery(this).attr("class").split(' ')[1];
 		jQuery(this).closest(".item-box").css("background-image", image);
-
-		jQuery(".BuyField").val(clas);
 		
+		convertedColour = colourConverter(clas);
+
+		jQuery(".show-me select").val(convertedColour);
+
 	});
+
+
 
 });
 
 
-
+function colourConverter(colour){
+	
+	switch(colour) {
+	  case 'blue':
+		return 'Blue'
+     break;
+	  case 'green':
+		return 'Dark Green'
+     break;
+	  case 'lightGreen':
+		return 'Light Green'
+     break;
+	  case 'magenta':
+		return 'Magenta'
+     break;
+	  case 'orange':
+		return 'Orange'
+     break;
+	  case 'pink':
+		return 'Pink'
+     break;
+	  case 'purple':
+		return 'Purple'
+     break;
+	  case 'yellow':
+		return 'Yellow'
+     break;
+	  default:
+		return false;
+	  break;
+	}
+	
+}

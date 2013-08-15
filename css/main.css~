@@ -2,7 +2,7 @@
   off white:#EBE1C8
   blackish grey : #545451
   light grey: #D8D4CC
-	orange: #E25D33
+  orange: #E25D33
 */
 
 body{
@@ -17,6 +17,12 @@ body{
     height: 131px;
 }
 
+#hard-coded-navigation li.current_page_item a {
+    
+    color: #fff;
+}
+
+          
 #hard-coded-navigation{
     font-family: Georgia, sans-serif;
 }
@@ -25,29 +31,47 @@ body{
     display: inline-block;
 }
 
-#hard-coded-navigation #menu-header-menu{
+
+
+#hard-coded-navigation #menu-header-menu,
+#hard-coded-navigation #menu-header-menu ul
+{
     padding: 0px;
     margin: 0px;
     display: block;
     list-style: none;
 }
 
+#hard-coded-navigation #menu-header-menu ul.sub-menu {
+	display: block;
+	margin-top: 14px;
+	position: absolute;
+	top: 78px;
+	left: 332px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#hard-coded-navigation #menu-header-menu ul.sub-menu a {
+	display:block;
+}
+
+
 #hard-coded-navigation li {
     float:left;
     margin-right: 25px;
     margin-bottom: 60px;
-   /* padding-bottom: 16px;
-    border-bottom: 1px solid #272725;*/
 }
 
-#hard-coded-navigation li:hover {
-   /* border-bottom: 1px solid #F9F9F6;*/
-}
-
-#hard-coded-navigation a{
+#hard-coded-navigation a {
     color: #7b7b78;
     padding-bottom: 16px;
     border-bottom: 1px solid #272725;
+    
+    transition: border-bottom .5s ease-in-out, color .4s ease-in-out;
+   -moz-transition: border-bottom .5s ease-in-out, color .4s ease-in-out;
+   -webkit-transition: border-bottom .5s ease-in-out, color .4s ease-in-out;
+     
 }
 
 #hard-coded-navigation a:hover {
@@ -55,6 +79,12 @@ body{
     text-decoration: none;
     border-bottom: 1px solid #F9F9F6;
 }
+
+#hard-coded-navigation li.current_page_item a{
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+  
 
 .isotope-item {
   z-index: 2;
@@ -156,28 +186,4 @@ margin: 8px 0px 0px 22px;
 
 #foot-container a:hover {
     color: #F9F9F6;
-}
-
-#foot-icons{
-    float: right;
-    width: 25px;
-    height:25px;
-}
-#foot-icons a{
-    display: inline-block;
-    width:25px;
-    height: 25px;
-    background-image: url("../images/social-media.png");
-}
-
-#twitter{
-    background-position: 0px 87px;
-}
-
-#google-plus{
-    background-position: 0px 57px;
-}
-
-#facebook{
-    background-position: 0px 0px;
 }

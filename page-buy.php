@@ -5,15 +5,34 @@ Template Name: Buy
 	
 	// javascript
 	wp_dequeue_script('jquery');
-        wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js');
+   wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js');
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', 'jquery');
 	wp_enqueue_script( 'buyScript', get_template_directory_uri() . '/js/buy.js', 'jquery');
+
         // css
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css');
-        wp_enqueue_style( 'buyPage', get_template_directory_uri() . '/css/buy.css');
+   wp_enqueue_style( 'buyPage', get_template_directory_uri() . '/css/buy.css');
 
 
     global $query_string;
-    query_posts( 'category_name=buy&order=ASC&posts_per_page=-1' );
+
+	$title = get_the_title(get_the_ID());
+
+	$title = ucfirst($title);
+
+   if($title == "Buy") {
+		$title = array("Ring", "Bracelet", "Necklace");
+	} else {
+		$title = substr($title, 0, -1);
+	}
+	
+
+    query_posts( array(	'category_name' 	=> 'buy',
+								'meta_key' 	 		=> 'type',
+								'meta_value'		=>	$title,
+								'order'				=> 'ASC',
+								'posts_per_page'	=> -1 
+					));
 
     get_header(); ?>
 
@@ -33,7 +52,12 @@ Template Name: Buy
 				</div>
 				<div id="single-item-column"> 
 
-					<?php query_posts( 'category_name=buy&order=ASC' ); ?>
+					<?php //query_posts( 'category_name=buy&order=ASC' ); ?>
+					<?php query_posts( array(	'category_name' 	=> 'buy',
+														'meta_key' 	 		=> 'type',
+														'meta_value'		=>	$title,
+														'order'				=> 'ASC'
+					)); ?>
 					<?php $first = true; $hiddenClass = "show-me";?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						
@@ -57,7 +81,6 @@ Template Name: Buy
                                                                         <span class="color-box yellow"></span>
 								</div>
                                                                 <div class="buy-button">
-                                                                    <?php //var_dump($cartCode); ?>
 									<?php echo $cartCode[0]; ?>
 								</div>
                                                              

@@ -613,6 +613,7 @@ function loadCustomJSCSS(){
     wp_dequeue_script('jquery');
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js');
     wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/jquery.isotope.min.js', array('jquery'));
+	 wp_enqueue_script( 'home', get_template_directory_uri() . '/js/home.js', array('jquery'));
     wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array('isotope'));
     
     //Styles
