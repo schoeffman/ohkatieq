@@ -11,7 +11,7 @@ jQuery(document).ready(function(){
     {
         jQuery("#container .item img").each(function(){          
             jQuery(this).attr('onclick','');
-        })
+        });
     }
 
 
@@ -20,13 +20,6 @@ var jQuerycontainer = jQuery('#container');
 // initialize isotope
 jQuerycontainer.isotope({
   // options...
-});
-
-// filter items when filter link is clicked
-jQuery('#filters a').click(function(){
-  var selector = jQuery(this).attr('data-filter');
-  jQuerycontainer.isotope({filter: selector});
-  return false;
 });
 
 

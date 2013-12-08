@@ -11,13 +11,6 @@ Template Name: Home
     
     get_header(); ?>
 
-<ul id="filters">
-  <li><a href="#" data-filter="*">All</a></li>
-  <li><a href="#" data-filter=".Necklace">Necklace</a></li>
-  <li><a href="#" data-filter=".Bracelet">Bracelet</a></li>
-  <li><a href="#" data-filter=".Ring">Ring</a></li>
-</ul>
-
 		<div id="primary">
 			<div id="container" role="main">                        
                             

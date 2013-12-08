@@ -47,9 +47,12 @@ body{
 	margin-top: 14px;
 	position: absolute;
 	top: 78px;
-	left: 332px;
+	left: 522px;
 	margin: 0px;
 	padding: 0px;
+}
+.category-buy #hard-coded-navigation #menu-header-menu ul.sub-menu a {
+	display: block;
 }
 
 #hard-coded-navigation #menu-header-menu ul.sub-menu a {
@@ -101,8 +104,8 @@ margin: 8px 0px 0px 22px;
 
 .Square{
       margin: 0px 1px 1px 0px;
-		height:296px;
-		width:318px;
+      height:296px;
+      width:318px;
       float:left;
         
 }
@@ -110,7 +113,7 @@ margin: 8px 0px 0px 22px;
 .Rectangle-Verticle {
         margin: 0px 1px 1px 0px;
         height:593px;
-	     width:318px;
+	width:318px;
         float:left;
 }
 
@@ -142,33 +145,6 @@ margin: 8px 0px 0px 22px;
 .Rectangle-Horizontal  img{
     height:296px;
     width:637px;
-}
-
-#filters
-{
-    float:right;
-    list-style: none;
-    margin: 0px 70px;
-    padding: 0px;
-}
-
-#filters li {
-    float:left;
-    margin: 0px 10px;
-    
-}
-
-#filters a:hover{
-    color: #97c93c;
-    text-decoration: none;
-    
-   
-
-}
-
-#filters a {   
-    color: #F9F9F6;
-    font-size: 16px;
 }
 
 #foot-container{
